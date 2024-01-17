@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Euro-predictor-style.css">
+
+<head>
+
+<script>
+
+    function moveOption(option, groupId) {
+      var groupContainer = document.getElementById(groupId);
+      var emptyCells = groupContainer.querySelectorAll('.country-pos:not(.occupied)');
+
+      if (emptyCells.length > 0) {
+        var emptyCell = emptyCells[0];
+        emptyCell.classList.add('occupied'); // Mark the cell as occupied
+        emptyCell.innerHTML = option.innerHTML; // Copy the content (including the image) of the option
+        option.parentNode.removeChild(option);
+      }
+    }
+</script>
+  </script>
+  </head>
+  <body>
+
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Euro-countries.html">Countries</a></li>
+        <li><a href="#">Predictor</a></li>
+        <li><a href="#">Host Cities</a></li>
+        <li><a href="#">Matches</a></li>
+        <li><a href="#">Tickets</a></li>
+        <li><a href="#">Store</a></li>
+        
+      </ul>
+      <ul>
+        <li><img class="nav_logo" src="../Euro2024/images/euro-2024-logo-removebg-preview.png" alt=""></li>
+        
+        <li class="hideOnMobile"><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="Euro-countries.html">Countries</a></li>
+        <li class="hideOnMobile"><a href="#">Predictor</a></li>
+        <li class="hideOnMobile"><a href="#">Store</a></li>
+        <li onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      </ul>
+    </nav>
+
+    <p>PREDICTOR</p>
+    
+  <div class="all-groups">
+        <div class="group">
+            <h1 id="group-a">GROUP A</h1>
+            <div id="options">
+              <p><button onclick="moveOption(this, 'group1')"><img class="flag" src="../Euro2024/images/1200px-Flag_of_Germany.svg.webp" alt="">  GER</button></p>
+              <p><button onclick="moveOption(this, 'group1')"><img class="flag" src="../Euro2024/images/Flag_of_Scotland.svg.webp" alt="">  SCO</button></p>
+              <p><button onclick="moveOption(this, 'group1')"><img class="flag" src="../Euro2024/images/Flag-Switzerland.webp" alt="">  SUI</button></p>
+              <p><button onclick="moveOption(this, 'group1')"><img class="flag" src="../Euro2024/images/Flag-Hungary.webp" alt="">  HUN</button></p>
+            </div>
+      
+          <div class="group-container" id="group1">
+            <div class="empty-cell">
+              <div>1.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>2.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>3.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>4.</div>
+              <div class="country-pos">...</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="group">
+          <h1 id="group-b">GROUP B</h1>
+          <div id="options">
+            <p><button onclick="moveOption(this, 'group2')"><img class="flag" src="../Euro2024/images/italy_flag.png" alt="">  ITA</button></p>
+              <p><button onclick="moveOption(this, 'group2')"><img class="flag" src="../Euro2024/images/Flag_of_Croatia.svg.png" alt="">  CRO</button></p>
+              <p><button onclick="moveOption(this, 'group2')"><img class="flag" src="../Euro2024/images/Bandera_de_España.svg.webp" alt="">  ESP</button></p>
+              <p><button onclick="moveOption(this, 'group2')"><img class="flag" src="../Euro2024/images/Flag_of_Albania.svg.png" alt="">  ALB</button></p>
+          </div>
+          <div class="group-container" id="group2">
+            <div class="empty-cell">
+              <div>1.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>2.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>3.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>4.</div>
+              <div class="country-pos">...</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="group">
+      <h1 id="group-c">GROUP C</h1>
+      <div id="options">
+          <p><button onclick="moveOption(this, 'group3')"><img class="flag" src="../Euro2024/images/Flag_of_Slovenia.svg.png" alt="">  SVN</button></p>
+          <p><button onclick="moveOption(this, 'group3')"><img class="flag" src="../Euro2024/images/Flag_of_Denmark.svg.webp" alt="">  DEN</button></p>
+          <p><button onclick="moveOption(this, 'group3')"><img class="flag" src="../Euro2024/images/Flag_of_England.svg.png" alt="">  ENG</button></p>
+          <p><button onclick="moveOption(this, 'group3')"><img class="flag" src="../Euro2024/images//Flag_of_Serbia.svg.png" alt="">  SRB</button></p>
+      </div>
+      <div class="group-container" id="group3">
+        <div class="empty-cell">
+          <div>1.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>2.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>3.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>4.</div>
+          <div class="country-pos">...</div>
+        </div>
+      </div>
+    </div>
+    <div class="group">
+          <h1 id="group-d">GROUP D</h1>
+          <div id="options">
+            <p><button onclick="moveOption(this, 'group4')"><img class="flag" src="../Euro2024/images/Flag_of_Austria.svg.webp" alt="">  AUT</button></p>
+              <p><button onclick="moveOption(this, 'group4')"><img class="flag" src="../Euro2024/images/Flag_of_France.svg.webp" alt="">  FRA</button></p>
+              <p><button onclick="moveOption(this, 'group4')"><img class="flag" src="../Euro2024/images/Flag_of_the_Netherlands.svg.webp" alt="">  NED</button></p>
+              <p><button onclick="moveOption(this, 'group4')"><img class="flag" src="../Euro2024/images/PlayOff-A.PNG" alt="">  PW-A</button></p>
+          </div>
+          <div class="group-container" id="group4">
+            <div class="empty-cell">
+              <div>1.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>2.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>3.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>4.</div>
+              <div class="country-pos">...</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="group">
+      <h1 id="group-e">GROUP E</h1>
+      <div id="options">
+        <p><button onclick="moveOption(this, 'group5')"><img class="flag" src="../Euro2024/images/Flag_of_Romania.svg.webp" alt="">  ROU</button></p>
+        <p><button onclick="moveOption(this, 'group5')"><img class="flag" src="../Euro2024/images/Flag_of_Belgium.svg.png" alt="">  BEL</button></p>
+        <p><button onclick="moveOption(this, 'group5')"><img class="flag" src="../Euro2024/images/Flag_of_Slovakia.svg.png" alt="">  SVK</button></p>
+        <p><button onclick="moveOption(this, 'group5')"><img class="flag" src="../Euro2024/images/PlayOff-B.PNG" alt="">  PW-B</button></p>
+      </div>
+      <div class="group-container" id="group5">
+        <div class="empty-cell">
+          <div>1.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>2.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>3.</div>
+          <div class="country-pos">...</div>
+        </div>
+        <div class="empty-cell">
+          <div>4.</div>
+          <div class="country-pos">...</div>
+        </div>
+      </div>
+    </div>
+    <div class="group">
+          <h1 id="group-f">GROUP F</h1>
+          <div id="options">
+            <p><button onclick="moveOption(this, 'group6')"><img class="flag" src="../Euro2024/images/Flag_of_the_Czech_Republic.svg.webp" alt="">  CZE</button></p>
+            <p><button onclick="moveOption(this, 'group6')"><img class="flag" src="../Euro2024/images/Flag_of_Turkey.svg.webp" alt="">  TUR</button></p>
+            <p><button onclick="moveOption(this, 'group6')"><img class="flag" src="../Euro2024/images/Flag_of_Portugal.svg.webp" alt="">  POR</button></p>
+            <p><button onclick="moveOption(this, 'group6')"><img class="flag" src="../Euro2024/images/PlayOff-C.PNG" alt="">  PW-C</button></p>
+          </div>
+          <div class="group-container" id="group6">
+            <div class="empty-cell">
+              <div>1.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>2.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>3.</div>
+              <div class="country-pos">...</div>
+            </div>
+            <div class="empty-cell">
+              <div>4.</div>
+              <div class="country-pos">...</div>
+            </div>
+          </div>
+    </div>
+  </div>
+  </body>
+</html>

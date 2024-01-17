@@ -1,0 +1,274 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: large;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #143cda;
+  }
+  p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  nav{
+    position: relative;
+    background-color: #143cda;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
+    z-index: 2;
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    height: 60px;
+  }
+  
+  nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+  }
+  
+  nav a:hover{
+    background-color: #081fb9;
+  }
+  
+  nav li:first-child{
+    margin-right: auto;
+  }
+  
+  .nav_logo {
+    margin: 3px;
+    width: 75px;
+  }
+  
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    z-index: 999;
+    background-color: #0f2596;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.336);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border: 1px solid #0f2596;
+  }
+  
+  .sidebar li{
+    width: 100%;
+  }
+  
+  .sidebar a{
+    width: 100%;
+  }
+  
+  
+
+.all-groups {
+    display: grid;
+    grid-template-columns: repeat(2, 40vw);
+    gap: 3em 1em;
+    margin: 0px auto;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1em 1.5em;
+    gap: 1em;
+    border-radius: 0.3em;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border: 1px solid #0025b9;
+    
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 4px;
+    flex-wrap: wrap;
+
+}
+
+button {
+    display: inline-flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color:#143cda;
+    color: white;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 8px;
+    gap: 8px;
+    opacity: 1;
+    cursor: pointer;
+    flex: 1 1 auto;
+    height: 50px;
+    width: 120px;
+    font-size: 23px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+button:hover {
+  opacity: 0.7;
+}
+button:active {
+  opacity: 0.3;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.empty-cell {
+    width: 100%;
+    height: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #0025b9;
+}
+
+.country-pos {
+  padding-left: 10px;
+}
+
+#group-a {
+  display: flex;
+  background-color: #0e2b8a;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#group-b {
+  display: flex;
+  background-color: #53b666;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#group-c {
+  display: flex;
+  background-color: #e43223;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#group-d {
+  display: flex;
+  background-color: #f5cd45;
+  color: black;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#group-e {
+  display: flex;
+  background-color: #d6e1e9;
+  color: black;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+#group-f {
+  display: flex;
+  background-color: #1e1f28;
+  border-radius: 80px;
+  height: 60px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+
+@media(max-width: 800px){
+  .hideOnMobile{
+    display: none;
+  }
+}
+
+@media(max-width: 500px){
+  .sidebar{
+    width: 100%;
+    height: 100%;
+  }
+  .title-body{
+    font-size: 30px;
+  }
+  
+  #group-a {
+    font-size: 25px;
+  }
+  #group-b {
+    font-size: 25px;
+  }
+  #group-c {
+    font-size: 25px;
+  }
+  #group-d {
+    font-size: 25px;
+  }
+  #group-e {
+    font-size: 25px;
+  }
+  #group-f {
+    font-size: 25px;
+  }
+
+  button {
+    height: 25px;
+    width: 60px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .flag {
+    width: 15px;
+    height: 15px;
+  }
+}
